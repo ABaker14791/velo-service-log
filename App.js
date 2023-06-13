@@ -1,7 +1,9 @@
 import { StyleSheet, Text, View } from "react-native";
+import { useState } from "react";
+// Components
 import SignUpForm from "./components/SignUpForm";
 import Header from "./components/Header";
-import { useState } from "react";
+import MenuBar from "./components/MenuBar";
 
 export default function App() {
 	const [signedIn, setSignedIn] = useState(true);
@@ -10,7 +12,7 @@ export default function App() {
 			<Header />
 			{signedIn === false ? <SignUpForm /> : null}
 			<div>Content</div>
-			<div>Navigation bar</div>
+			<MenuBar />
 		</View>
 	);
 }
@@ -18,7 +20,7 @@ export default function App() {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: "#fff",
+		backgroundColor: "#EDECDB",
 		alignItems: "center",
 		fontFamily: "sans-serif",
 	},
