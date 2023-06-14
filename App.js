@@ -4,6 +4,7 @@ import { useState } from "react";
 import SignUpForm from "./components/SignUpForm";
 import Header from "./components/Header";
 import MenuBar from "./components/MenuBar";
+import BikeCard from "./components/BikeCard";
 
 export default function App() {
 	const [signedIn, setSignedIn] = useState(true);
@@ -11,7 +12,7 @@ export default function App() {
 		<View style={styles.container}>
 			<Header />
 			{signedIn === false ? <SignUpForm /> : null}
-			<div>Content</div>
+			<BikeCard />
 			<MenuBar />
 		</View>
 	);
