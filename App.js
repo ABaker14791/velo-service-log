@@ -11,9 +11,11 @@ export default function App() {
 	return (
 		<View style={styles.container}>
 			<Header />
-			{signedIn === false ? <SignUpForm /> : null}
-			<BikeCard />
-			<MenuBar />
+			<div style={styles.content}>
+				{signedIn === false ? <SignUpForm /> : null}
+				<BikeCard />
+				<MenuBar />
+			</div>
 		</View>
 	);
 }
@@ -24,5 +26,12 @@ const styles = StyleSheet.create({
 		backgroundColor: "#EDECDB",
 		alignItems: "center",
 		fontFamily: "sans-serif",
+		color: "#454545",
+		boxSizing: "border-box",
+	},
+	content: {
+		width: "100%",
+		padding: "1rem",
+		boxSizing: "border-box",
 	},
 });
